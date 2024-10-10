@@ -1,50 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #d9f0ff, #a0cfff);
+    color: #333;
+    padding: 20px;
+    scroll-behavior: smooth;
 }
 
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
+.container {
+    max-width: 800px;
     margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-.logo img {
-    height: 40px;
+.profile-card {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f3faff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.nav-menu li {
-    margin-left: 20px;
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.nav-menu a {
-    color: #fff;
-    text-decoration: none;
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
 .section {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-h1, h2 {
+.section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
     color: #333;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .profile-info h2 {
+        font-size: 16px;
+    }
+
+    .profile-info p {
+        font-size: 12px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
 }
