@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 个人信息部分 -->
+        <div class="profile-card fade-in">
+            <img src="your-image-url-here.jpg" alt="头像" class="profile-img">
+            <div class="profile-info">
+                <h1>杜锦洲</h1>
+                <h2>Du Jinzhou</h2>
+                <p>重庆邮电大学</p>
+                <p>软件工程学院 (2022-2026)</p>
+                <p>邮箱: 1915148903@qq.com</p>
+                <p>电话: 16627397669</p>
+            </div>
+        </div>
+
+        <!-- 个人简介 -->
+        <section class="section fade-in">
+            <h2>个人介绍</h2>
+            <p>我是重庆邮电大学软件工程学院软件+英语特色专业的一名本科生.</p>
+            <a href="#learning" class="button">了解更多</a>
+        </section>
+
+        <!-- 学习经历 -->
+        <section class="section fade-in" id="learning">
+            <h2>学习经历</h2>
+            <p>2022年求学于重庆邮电大学</p>
+        </section>
+
+        <!-- 科研项目 -->
+        <section class="section fade-in">
+            <h2>科研项目</h2>
+            <h3>论文</h3>
+            <p>暂无</p>
+            <h3>项目</h3>
+            <p>暂无</p>
+            <h3>实验室</h3>
+            <p>暂无。</p>
+        </section>
+
+        <!-- 学科竞赛 -->
+        <section class="section fade-in">
+            <h2>学科竞赛</h2>
+            <p>暂无</p>
+        </section>
+    </div>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
